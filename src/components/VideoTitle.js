@@ -2,11 +2,11 @@ import React from "react";
 
 const VideoTitle = ({ title, info }) => {
   return (
-    <div className="pt-44 px-12">
+    <div className="pt-44 px-12 absolute text-white bg-gradient-to-r from-black w-screen aspect-video">
       <h2 className="text-2xl font-bold">{title}</h2>
       <p className="mt-5 w-2/5">{info}</p>
       <div className="mt-3">
-        <button className="bg-gray-400 px-10 py-2 font-semibold text-base rounded-md">
+        <button className="bg-white px-10 py-2 font-semibold text-base rounded-md text-black hover:bg-slate-300">
           <img
             className="mb-1 mr-2 w-4 inline-block "
             src="https://cdn-icons-png.flaticon.com/128/27/27223.png"
@@ -14,7 +14,7 @@ const VideoTitle = ({ title, info }) => {
           />
           Play
         </button>
-        <button className="bg-gray-400 px-8 py-2 ml-2 font-semibold text-base rounded-md">
+        <button className="bg-gray-700 px-8 py-2 ml-2 font-semibold text-base rounded-md">
           <img
             className="mb-1 mr-2 w-5 inline-block "
             src="https://cdn-icons-png.flaticon.com/128/545/545674.png"

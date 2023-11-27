@@ -4,15 +4,14 @@ import useTrailerVideo from "../Hooks/useTrailerVideo";
 
 const VideoBg = ({ movieId }) => {
   const currentTrailer = useSelector((store) => store.movies?.currentTrailer);
-  useTrailerVideo()
+  useTrailerVideo(movieId);
 
   return (
-    <div>
+    <div className="w-screen">
       <iframe
-        width="560"
-        height="315"
+        className="w-screen aspect-video"
         //We can use either useState to dynamically change the video key or we can store the trailer object into redux store and from store we takeout the video key and concatanate the below src
-        src={"https://www.youtube.com/embed/" + currentTrailer?.key}
+        src={"https://www.youtube.com/embed/" + currentTrailer?.key +"?&autoplay=1&mute=1&loop=1"}
         title="YouTube video player"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       ></iframe>

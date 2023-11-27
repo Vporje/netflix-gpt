@@ -47,17 +47,17 @@ const Header = () => {
       });
   };
   return (
-    <div className="w-screen absolute bg-gradient-to-b from-black z-10 flex justify-between">
+    <div className="w-screen absolute z-10 flex justify-between">
       <div>
         <img
           src={LOGO}
           alt="logo"
-          className="w-56 ml-8"
+          className="w-48 ml-8"
         />
       </div>
-      {user && <div className="font-bold text-xl text-red-600 cursor-pointer p-2 mx-10 mt-4 flex">
-        <img className="w-12 m-1 rounded-lg" src={user?.photoURL} alt="userImage" />
-        <button onClick={signOutHandler}>Sign Out</button>
+      {user && <div className="font-bold text-xl text-red-600 cursor-pointer p-2 mx-10 mt-3 flex">
+        <img className="w-10 h-10 rounded-lg" src={user?.photoURL} alt="userImage" />
+        <button className="mx-2" onClick={signOutHandler}>Sign Out</button>
       </div>}
     </div>
   );
