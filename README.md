@@ -17,7 +17,16 @@
 #   updated profile
 #   implemented sign-out
 #   fixing the bug of updating the user's displayName and photoURL in one go (earlier we have to do refreshing of  browse page)
+#   Fixbug: when user is not logged in still /browse page is accessible and vice versa
+#   Fixbug: signup user page and profile
+#   unsubscribe to the onAuthStateChanged callbacl
+#   add hardcoded values to the constants.js
 #   fetch movies from TMDB
+#   make a custom hook useNowPlayingMovies and storing the movies in store
+#   make videoBg layout in primary container
+#   fetch videos and filter out trailer and store it into the store
+#   make custom hook useTrailerVideo and embed the trailer into the videoBg
+ 
  
 
 
