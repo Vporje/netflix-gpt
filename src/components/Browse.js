@@ -2,9 +2,14 @@ import useNowPlayingMovies from "../Hooks/useNowPlayingMovies";
 import Header from "./Header";
 import SecondaryContainer from "./SecondaryContainer";
 import PrimaryContainer from "./PrimaryContainer";
-
+import usePopularMovies from "../Hooks/usePopularMovies";
+import useTopRatedMovies from "../Hooks/useTopRatedMovies";
+import useUpcomingMovies from "../Hooks/useUpcomingMovies";
+import GPTsearchPage from "./GPTsearchPage";
+import { useSelector } from "react-redux";
 
 const Browse = () => {
+  const toggleSelector = useSelector((store) => store.gpt.showToggleState);
   /*
   - primaryContainer
     - bgVideo
@@ -16,12 +21,18 @@ const Browse = () => {
   */
 
   useNowPlayingMovies();
+  usePopularMovies();
+  useTopRatedMovies();
+  useUpcomingMovies();
 
   return (
     <div>
       <Header />
-      <PrimaryContainer />
-      <SecondaryContainer />
+      {toggleSelector ? <GPTsearchPage /> :
+      <>
+        <PrimaryContainer />
+        <SecondaryContainer />
+      </>}
     </div>
   );
 };

@@ -26,6 +26,15 @@
 #   make videoBg layout in primary container
 #   fetch videos and filter out trailer and store it into the store
 #   make custom hook useTrailerVideo and embed the trailer into the videoBg
+#   embed youtube video
+#   build secondary component
+#   build movies category (vertical)
+#   build moviecards in each movie category(Horizontal)
+#   created custom hooks for various movies category
+#   GPT search page created
+#   GPT searchbar is created
+#   Multi-language feature added to the GPT search page
+
  
  
 
